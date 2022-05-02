@@ -1,0 +1,52 @@
+<header>
+  <h1>
+    <img
+      class="icono-comando"
+      src="assets/iconoComando.png"
+      alt="iconoComando"
+    />
+    COMANDO
+  </h1>
+  <h3 id="subtitulo">
+    Control y Organización del Material Necesario para el Despliegue en
+    Operaciones
+  </h3>
+  <div class="container-fluid">
+    <form class="form-inline">
+      <input
+        type="text"
+        class="form-control mb-2 mr-sm-2"
+        id="inlineFormInputName2"
+        placeholder="Administrador"
+      />
+      <input
+        type="password"
+        class="form-control mb-2 mr-sm-2"
+        id="inlineFormInputGroupUsername2"
+        placeholder="Contraseña"
+      />
+      <button type="submit" class="btn btn-primary mb-2">Aceptar</button>
+    </form>
+  </div>
+  <div class="container-fluid">
+
+    <nav class="navbar">
+        <button class="nav-boton" onclick="accion()">Menú</button>
+        <ul class="navegacion col-12">
+            <li class="lista-enlace"><a href="index.html" class="enlace desaparece">Inicio</a>
+            </li>
+            <li class="dropdown lista-enlace" id="nuevaMaleta"><a href="#nuevaMaleta" class="enlace desaparece">Nueva
+                    Maleta</a>
+                <div class=" dropdown-content">
+                    <a class="" href="maletaBarco.html">Maleta de Barco</a>
+                    <a class="" href="maletaCabina.html">Maleta de Cabina</a>
+                </div>
+            </li>
+            <li class="lista-enlace"><a href="misMaletas.html" class="enlace desaparece">Mis Maletas</a>
+            </li>
+            <!-- Esto será en un futuro el listado de las maletas de cada usuario -->
+        </ul>
+    </nav>
+</div>
+
+</header>
