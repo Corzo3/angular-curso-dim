@@ -11,5 +11,9 @@ export class MainComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  cambiaContenido(value:String){
+
+  }
+
 
 }

@@ -10,6 +10,7 @@ import { HeaderComponent } from './core/shell/header/header.component';
 import { MainComponent } from './core/shell/main/main.component';
 import { FooterComponent } from './core/shell/footer/footer.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,7 @@ import { FooterComponent } from './core/shell/footer/footer.component';
     ShellComponent,
     HeaderComponent,
     MainComponent,
-    FooterComponent,
+    FooterComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

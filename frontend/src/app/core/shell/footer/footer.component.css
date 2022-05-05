@@ -1,3 +1,6 @@
 .pie {
   color: black;
 }
+footer.container-fluid.pie-pagina{
+  text-align: right;
+}

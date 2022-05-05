@@ -28,25 +28,22 @@
       <button type="submit" class="btn btn-primary mb-2">Aceptar</button>
     </form>
   </div>
-  <div class="container-fluid">
-
-    <nav class="navbar">
-        <button class="nav-boton" onclick="accion()">Menú</button>
-        <ul class="navegacion col-12">
-            <li class="lista-enlace"><a href="index.html" class="enlace desaparece">Inicio</a>
-            </li>
-            <li class="dropdown lista-enlace" id="nuevaMaleta"><a href="#nuevaMaleta" class="enlace desaparece">Nueva
-                    Maleta</a>
-                <div class=" dropdown-content">
-                    <a class="" href="maletaBarco.html">Maleta de Barco</a>
-                    <a class="" href="maletaCabina.html">Maleta de Cabina</a>
-                </div>
-            </li>
-            <li class="lista-enlace"><a href="misMaletas.html" class="enlace desaparece">Mis Maletas</a>
-            </li>
-            <!-- Esto será en un futuro el listado de las maletas de cada usuario -->
-        </ul>
-    </nav>
-</div>
-
+  <nav class="navbar">
+    <button class="nav-boton" onclick="accion()">Menú</button>
+    <ul class="navegacion col-12">
+      <li class="lista-enlace">
+        <a routerLink="" class="enlace desaparece">Inicio</a>
+      </li>
+      <li class="dropdown lista-enlace" id="nuevaMaleta">
+        <a href="#nuevaMaleta" class="enlace desaparece">Nueva Maleta</a>
+        <div class="dropdown-content">
+          <a class="" href="maletaBarco.html">Maleta de Barco</a>
+          <a class="" href="maletaCabina.html">Maleta de Cabina</a>
+        </div>
+      </li>
+      <li class="lista-enlace">
+        <a routerLink="/maletas" class="enlace desaparece">Mis Maletas</a>
+      </li>
+    </ul>
+  </nav>
 </header>

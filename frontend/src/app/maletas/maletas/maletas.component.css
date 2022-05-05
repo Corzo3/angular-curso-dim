@@ -1,0 +1,66 @@
+.petate {
+  margin-top: 5%;
+}
+
+.mochila {
+  margin-top: 5%;
+}
+
+.mcabina{
+  width: 10rem;
+}
+
+.mbarco{
+  width: 8rem;
+}
+
+.container.cabina {
+  margin-top: 15%;
+}
+
+button.btn.btn-primary.btn-sm {
+  background-color: rgb(5, 71, 46);
+  border-color: rgb(58, 58, 57)
+}
+
+button.btn.btn-secondary {
+  background-color: rgb(5, 71, 46);
+  border-color: rgb(58, 58, 57)
+}
+
+.list-group-item {
+  font-size: medium;
+}
+
+@media (max-width:600px) {
+  nav {
+      flex-direction: column;
+  }
+  .nav-boton {
+      display: inline-block;
+  }
+  .desaparece {
+      display: none;
+  }
+}
+
+@media (min-width:768px) {
+  .lista-enlace {
+      flex: 1;
+      position: relative;
+      overflow: visible;
+  }
+  .lista-enlace .dropdown-content {
+      position: absolute;
+      width: 100%;
+  }
+  .dropdown-content {
+      display: none;
+  }
+  .lista-enlace:target .dropdown-content {
+      display: block;
+  }
+  .navegacion {
+      flex-direction: row;
+  }
+}
