@@ -1,73 +1,3 @@
-.nav-boton {
-    justify-content: center;
-    background-color: rgb(5, 71, 46);
-    color: #fff;
-    padding: 10px 0px;
-    border: 2px solid #fff;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 32px;
-    display: none;
-}
-
-div.p-2.tipo-m {
-    text-align: center;
-    margin-bottom: 3%;
-}
-
-.container-fluid {
-    z-index: 1;
-}
-
-.div.col {
-    z-index: 1;
-}
-
-.nombre-campo {
-    font-size: 1.3rem;
-}
-
-.tipo-m {
-    font-family: 'Franklin Gothic Medium';
-    font-size: 4rem;
-    color: #000;
-}
-
-.maleta-nueva {
-    width: 12rem;
-    margin-left: 25%;
-}
-
-.maleta-nueva-c {
-    margin-top: 20%;
-    width: 9em;
-    z-index: 1;
-}
-
-.formulario-maleta {
-    justify-self: center;
-    font-size: smaller;
-    color: black;
-    z-index: 1;
-}
-
-.btn {
-    margin-top: 25%;
-    background-color: rgb(5, 71, 46);
-    border-color: rgb(5, 71, 46);
-}
-
-.boton-primario {
-    border-radius: 5px;
-    background-color: rgb(5, 71, 46);
-    color: #fff;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: larger;
-}
-
-.boton-primario:hover {
-    background-color: rgb(58, 58, 57);
-}
-
 .list-items {
     display: inline-block;
     width: 350px;
@@ -134,8 +64,9 @@ div.p-2.tipo-m {
     position: relative;
     padding: 0 5px;
     display: flex;
-    height: 3rem;
-    width: 30rem;
+    height: 40px;
+    width: 500px;
+    grid-area: foot1;
 }
 
 .progress-value {

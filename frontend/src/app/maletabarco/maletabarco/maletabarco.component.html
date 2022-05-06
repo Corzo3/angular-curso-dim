@@ -1,1 +1,40 @@
-<p>maletabarco works!</p>
+<div class="p-2 tipo-m">
+    Maleta de Barco
+</div>
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-5">
+                <div>
+                    <img class="maleta-nueva" src="assets/maletaB.png" alt="Maleta de Barco">
+                    <div class="row">
+                        <div class="col-12 progress">
+                            <div class="progress-value"> %</div>
+                            <!-- En esta barra, una vez implementado todo, se irá recogiendo el peso total de los elementos cargados -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <form class="col-12 formulario-maleta">
+                    <div>
+                        <div class="row">
+                            <div class="col-4">
+                                <label class="nombre-campo">Fecha de Despliegue</label>
+                                <!-- Esta fecha se calcula restando un mes a la fecha de despliegue de la operación -->
+                                <input type="date" class="form-control">
+                                <label class="nombre-campo">Peso</label>
+                                <input type="number" class="form-control" placeholder="de su maleta vacía" min="0">
+                                <div class="row">
+                                    <div class="col-6"> <button type="reset" class="btn btn-primary">Resetear</button></div>
+                                    <div class="col-6"><button type="submit" class="btn btn-primary">Enviar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
