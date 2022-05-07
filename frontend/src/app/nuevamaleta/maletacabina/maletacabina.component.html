@@ -1,0 +1,86 @@
+<div>
+  <div class="p-2 tipo-m">Nueva Maleta de Cabina</div>
+</div>
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <img
+          class="maleta-nueva-c img-fluid"
+          src="assets/mochila.png"
+          alt="Maleta de Cabina"
+        />
+        <div class="row">
+          <div class="col-12 progress">
+            <div class="progress-value">%</div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <form class="col-12">
+          <div>
+            <div class="row">
+              <div>
+                <label class="nombre-campo">{{longitud > 55 ? "Medida no premitida" : "Medida permitida"}}</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder= "largo"
+                  min="0"
+                  max="55"
+                />
+                <label class="nombre-campo">Anchura(cm)</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder="ancho"
+                  min="0"
+                  max="35"
+                />
+                <label class="nombre-campo">Altura(cm)</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder="alto"
+                  min="0"
+                  max="25"
+                />
+                <label class="nombre-campo">Peso(Kg)</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder="de su maleta vacía"
+                  min="0"
+                  step="any"
+                />
+                <div class="row">
+                  <div class="col-6">
+                    <button type="reset" class="btn btn-primary resetear">
+                      Resetear
+                    </button>
+                  </div>
+                  <div class="col-6">
+                    <button type="submit" class="btn btn-primary enviar">
+                      Enviar
+                    </button>
+                  </div>
+                </div>
+                <div class="container">
+                  <div class="botonera">
+                    <button id="aceptar" class="boton-primario">Aceptar</button>
+                    <button id="cancelar" class="boton-primario">
+                      Eliminar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col">
+        <app-listadomaterial></app-listadomaterial>
+      </div>
+    </div>
+  </div>
+</div>

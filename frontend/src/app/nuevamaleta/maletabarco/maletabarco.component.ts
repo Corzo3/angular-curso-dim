@@ -7,9 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MaletabarcoComponent implements OnInit {
 
+fecha = "2022/03/10";
+peso = 2.5;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  mostrarFecha(value:string){
+
+  }
+
+  getfecha(fecha:string){
+    this.fecha = fecha;
+  }
+
+  setfecha(){
+
   }
 
 }
