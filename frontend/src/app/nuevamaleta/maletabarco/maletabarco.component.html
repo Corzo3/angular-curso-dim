@@ -24,7 +24,7 @@
               <div class="col-12">
                 <label class="nombre-campo" > Fecha de Despliegue: </label>
                 <input type="date" class="form-control" #fecha/>
-                <label class="nombre-campo">Fecha de Entrega:<p><input type="button" value = "Ver" class="ver" (click)="mostrarFecha(fecha.value)">{{fecha.value}}</p></label>
+                <label class="nombre-campo">Fecha Entrega (aprox.):</label><p><input type="button" value = "Calcular" class="ver" (click)="getFechaEntrega(fecha.value)"><span class="nombre-campo"> {{resultado | date : "dd/MM/yyyy"}}</span></p>
                 <br/>
                 <label class="nombre-campo">Peso</label>
                 <input

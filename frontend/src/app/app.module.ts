@@ -9,6 +9,7 @@ import { ShellComponent } from './core/shell/shell.component';
 import { HeaderComponent } from './core/shell/header/header.component';
 import { MainComponent } from './core/shell/main/main.component';
 import { FooterComponent } from './core/shell/footer/footer.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -21,10 +22,10 @@ import { FooterComponent } from './core/shell/footer/footer.component';
     MainComponent,
     FooterComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, CommonModule],
+  imports: [BrowserModule, AppRoutingModule, CommonModule, FormsModule],
   providers: [],
   bootstrap: [
-    AppComponent,
+    AppComponent
   ],
 })
 export class AppModule {}

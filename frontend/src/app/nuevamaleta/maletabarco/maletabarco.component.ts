@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-maletabarco',
@@ -7,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MaletabarcoComponent implements OnInit {
 
-fecha = "2022/03/10";
+
+resultado: any;
 peso = 2.5;
+
 
   constructor() { }
 
@@ -19,12 +22,12 @@ peso = 2.5;
 
   }
 
-  getfecha(fecha:string){
-    this.fecha = fecha;
-  }
+getFechaEntrega(fecha: string){
+  this.resultado = moment(fecha).subtract(1, 'month')
+  return this.resultado;
+}
 
-  setfecha(){
 
-  }
+
 
 }
