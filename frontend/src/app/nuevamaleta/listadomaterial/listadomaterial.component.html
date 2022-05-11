@@ -1,80 +1,47 @@
-
-  <button class="boton-primario cargar" (click)="cargarLista()">Cargar lista</button>
-  <br />
-  <br />
-  <div class="list-items">
+<button class="boton-primario cargar" (click)="cargarLista()">Cargar lista</button>
+<br />
+<br />
+<div class="list-items">
     <div class="item" *ngFor="let elemento of elementos">
-      <input type="checkbox" />
-      <label>{{ elemento.nombre }} ({{ elemento.peso }} kg)</label>
-      <span
-        ><input type="number" min="0" class="cantidad" placeholder="cant."
-      /></span>
+        <input type="checkbox" />
+        <label>{{ elemento.nombre }} ({{ elemento.peso }} kg)</label>
+        <span><input type="number" min="0" class="cantidad" placeholder="cant." /></span>
     </div>
-  </div>
-  <button
-    type="button"
-    class="boton-primario cargar"
-    data-bs-toggle="modal"
-    data-bs-target="#exampleModal"
-  >
-    Nuevo Elemento
-  </button>
-  <div
-    class="modal"
-    id="exampleModal"
-    tabindex="-1"
-    role="dialog"
-    aria-labelledby="exampleModalLabel"
-    aria-hidden="true"
-  >
+</div>
+<button type="button" class="boton-primario cargar" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Nuevo Elemento
+</button>
+<div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Nuevo Elemento</h5>
-          <button
-            type="button"
-            class="close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          >
-            <span aria-hidden="true">&times;</span>
-          </button>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Nuevo Elemento</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+            </div>
+            <div class="modal-body">
+                <form action="" class="col-12">
+                    <label for="">Nombre</label>
+                    <br />
+                    <input type="text" />
+                    <br />
+                    <label for="">Peso</label>
+                    <br />
+                    <input type="number" step="any" min="0" />
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Cerrar
+        </button>
+                <button type="reset" class="btn btn-secondary" routerLink="maletabarco">
+          Limpiar
+        </button>
+                <button type="submit" class="btn btn-secondary" routerLink="maletabarco">
+          Enviar
+        </button>
+            </div>
         </div>
-        <div class="modal-body">
-          <form action="" class="col-12">
-            <label for="">Nombre</label>
-            <br />
-            <input type="text" />
-            <br />
-            <label for="">Peso</label>
-            <br />
-            <input type="number" step="any" min="0" />
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-          >
-            Cerrar
-          </button>
-          <button
-            type="reset"
-            class="btn btn-secondary"
-            routerLink="maletabarco"
-          >
-            Limpiar
-          </button>
-          <button
-            type="submit"
-            class="btn btn-secondary"
-            routerLink="maletabarco"
-          >
-            Enviar
-          </button>
-        </div>
-      </div>
     </div>
-  </div>
-
+</div>

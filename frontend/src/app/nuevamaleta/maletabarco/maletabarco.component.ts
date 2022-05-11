@@ -8,8 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MaletabarcoComponent implements OnInit {
 
-fechaRecogida:string = "";
-peso : number = 0;
+maletaBarco = {fechaRecogida: "" , peso:0}
 creada = false;
 mensaje = "";
 

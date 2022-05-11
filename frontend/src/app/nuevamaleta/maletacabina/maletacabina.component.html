@@ -1,87 +1,59 @@
 <div>
-  <div class="p-2 tipo-m">Nueva Maleta de Cabina</div>
+    <div class="p-2 tipo-m">Nueva Maleta de Cabina</div>
 </div>
 <div class="container-fluid">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <img
-          class="maleta-nueva-c img-fluid"
-          src="assets/mochila.png"
-          alt="Maleta de Cabina"
-        />
+    <div class="container">
         <div class="row">
-          <div class="col-12 progress">
-            <div class="progress-value">%</div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <form class="col-12">
-          <div>
-            <div class="row">
-              <div>
-                <label class="nombre-campo">Altura(cm)</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  placeholder= "alto"
-                  min="0"
-                  max="55"
-                />
-                <label class="nombre-campo">Anchura(cm)</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  placeholder="ancho"
-                  min="0"
-                  max="35"
-                />
-                <label class="nombre-campo">Profundidad(cm)</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  placeholder="profundo"
-                  min="0"
-                  max="25"
-                />
-                <label class="nombre-campo">Peso(Kg)</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  placeholder="de su maleta vacía"
-                  min="0"
-                  step="any"
-                />
+            <div class="col">
+                <img class="maleta-nueva-c img-fluid" src="assets/mochila.png" alt="Maleta de Cabina" />
                 <div class="row">
-                  <div class="col-6">
-                    <button type="reset" class="btn btn-primary resetear" (click)="borrarMensaje()">
+                    <div class="col-12 progress">
+                        <div class="progress-value">%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <form class="col-12">
+                    <div>
+                        <div class="row">
+                            <div>
+                                <label for="altura" class="nombre-campo">Altura(cm)</label>
+                                <input name="altura" type="number" class="form-control" placeholder="alto" min="0" max="55" [(ngModel)]="maletaCabina.altura" />
+                                <label for="anchura" class="nombre-campo">Anchura(cm)</label>
+                                <input name="anchura" type="number" class="form-control" placeholder="ancho" min="0" max="35" [(ngModel)]="maletaCabina.anchura" />
+                                <label for="profundidad" class="nombre-campo">Profundidad(cm)</label>
+                                <input name="profundidad" type="number" class="form-control" placeholder="profundo" min="0" max="25" [(ngModel)]="maletaCabina.profundidad" />
+                                <label for="peso" class="nombre-campo">Peso(Kg)</label>
+                                <input name="profundidad" type="number" class="form-control" placeholder="de su maleta vacía" min="0" step="any" [(ngModel)]="maletaCabina.peso" />
+                                <div class="row">
+                                    <div class="col-6">
+                                        <button type="reset" class="btn btn-primary resetear" (click)="borrarMensaje()">
                       Resetear
                     </button>
-                  </div>
-                  <div class="col-6">
-                    <button type="submit" class="btn btn-primary enviar" (click)="crearMaletaCabina()">
+                                    </div>
+                                    <div class="col-6">
+                                        <button type="submit" class="btn btn-primary enviar" (click)="crearMaletaCabina()">
                       Enviar
                     </button>
-                  </div>
-                  <p class="nombre-campo">{{mensaje}}</p>
-                </div>
-                <div class="container">
-                  <div class="botonera">
-                    <button id="aceptar" class="boton-primario">Aceptar</button>
-                    <button id="cancelar" class="boton-primario">
+                                    </div>
+                                    <p class="nombre-campo">{{mensaje}}</p>
+                                </div>
+                                <div class="container">
+                                    <div class="botonera">
+                                        <button id="aceptar" class="boton-primario">Aceptar</button>
+                                        <button id="cancelar" class="boton-primario">
                       Eliminar
                     </button>
-                  </div>
-                </div>
-              </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
-          </div>
-        </form>
-      </div>
-      <div class="col">
-        <app-listadomaterial></app-listadomaterial>
-      </div>
+            <div class="col">
+                <app-listadomaterial></app-listadomaterial>
+            </div>
+        </div>
     </div>
-  </div>
 </div>

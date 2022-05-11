@@ -1,66 +1,55 @@
 <div class="p-2 tipo-m">Nueva Maleta de Barco</div>
 <div class="container-fluid">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <div>
-          <img
-            class="maleta-nueva img-fluid"
-            src="assets/maletaB.png"
-            alt="Maleta de Barco"
-          />
-          <div class="row">
-            <div class="col-12 progress">
-              <div class="progress-value">%</div>
-              <!-- En esta barra, una vez implementado todo, se irá recogiendo el peso total de los elementos cargados -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div>
+                    <img class="maleta-nueva img-fluid" src="assets/maletaB.png" alt="Maleta de Barco" />
+                    <div class="row">
+                        <div class="col-12 progress">
+                            <div class="progress-value">%</div>
+                            <!-- En esta barra, una vez implementado todo, se irá recogiendo el peso total de los elementos cargados -->
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <form class="col-12">
-          <div>
-            <div class="row">
-              <div class="col-10">
-                <label class="nombre-campo"> Fecha de Recogida: <img class="informacion" src="assets/informacion.png" alt="Información" title="La fecha de recogida será aproximadamente un mes antes de la fecha de despliegue de su Unidad" (click)="mostrarAyuda()"></label>
-                <input type="date" class="form-control" [(ngModel)] = "fechaRecogida" name="fechaRecogida" #fecha title=""/>
-                <label class="nombre-campo">Peso</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  placeholder="de su maleta vacía"
-                  min="0"
-                  [(ngModel)] = "peso"
-                  step="any"
-                />
-                <div class="row">
-                  <div class="col-6">
-                    <button type="reset" class="btn btn-primary boton-primario resetear" (click)="borrarMensaje()">
+            <div class="col">
+                <form class="col-12">
+                    <div>
+                        <div class="row">
+                            <div class="col-10">
+                                <label for="fechaRecogida" class="nombre-campo"> Fecha de Recogida: <img class="informacion" src="assets/informacion.png" alt="Información" title="La fecha de recogida será aproximadamente un mes antes de la fecha de despliegue de su Unidad" (click)="mostrarAyuda()"></label>
+                                <input name="fechaRecogida" type="date" class="form-control" [(ngModel)]="maletaBarco.fechaRecogida" />
+                                <label for="peso" class="nombre-campo">Peso</label>
+                                <input name="peso" type="number" class="form-control" placeholder="de su maleta vacía" min="0" [(ngModel)]="maletaBarco.peso" step="any" />
+                                <div class="row">
+                                    <div class="col-6">
+                                        <button type="reset" class="btn btn-primary boton-primario resetear" (click)="borrarMensaje()">
                       Resetear
                     </button>
-                  </div>
-                  <div class="col-6">
-                    <button type="submit" class="btn btn-primary boton-primario enviar" (click)="crearMaletaBarco()" >
+                                    </div>
+                                    <div class="col-6">
+                                        <button type="submit" class="btn btn-primary boton-primario enviar" (click)="crearMaletaBarco()">
                       Enviar
                     </button>
-                  </div>
-                  <br/>
-                  <p *ngIf="creada" class="nombre-campo mensaje">{{mensaje}}</p>
-                </div>
-                <div class="botonera">
-                  <button id="aceptar" class="boton-primario">Aceptar</button>
-                  <button id="cancelar" class="boton-primario">Eliminar</button>
-                </div>
-              </div>
+                                    </div>
+                                    <br/>
+                                    <p *ngIf="creada" class="nombre-campo mensaje">{{mensaje}}</p>
+                                </div>
+                                <div class="botonera">
+                                    <button id="aceptar" class="boton-primario">Aceptar</button>
+                                    <button id="cancelar" class="boton-primario">Eliminar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
-          </div>
-        </form>
-      </div>
-      <!--  Este es el listado de material que se puede cargar en las diferentes maletas. Entre parentesis, marcado como (kg), irá en un futuro el peso
+            <!--  Este es el listado de material que se puede cargar en las diferentes maletas. Entre parentesis, marcado como (kg), irá en un futuro el peso
           de cada elemento de tal manera que se vaya sumando a un contador (barra de progreso) hasta llegar al peso límite permitido para cada tipo de maleta -->
-          <div class="col-3">
-            <app-listadomaterial></app-listadomaterial>
+            <div class="col-3">
+                <app-listadomaterial></app-listadomaterial>
+            </div>
         </div>
     </div>
-  </div>
 </div>

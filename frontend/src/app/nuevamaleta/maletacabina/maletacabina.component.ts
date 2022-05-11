@@ -6,10 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./maletacabina.component.css'],
 })
 export class MaletacabinaComponent implements OnInit {
-  longitud = 60;
-  anchura = 40;
-  altura = 20;
-  peso = 1.5;
+  public maletaCabina = {altura: 0,anchura: 0, profundidad: 0, peso: 0 };
   creada=false;
   mensaje = "";
   constructor() {}
