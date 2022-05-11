@@ -1,6 +1,6 @@
 <img class="col-5 mbarco img-fluid" src="assets/maletaB.png" alt="Maleta de barco 1" />
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="cargarLista()">
+<button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Ver Contenido
 </button>
 
@@ -15,8 +15,8 @@
         </button>
             </div>
             <div class="modal-body">
-                <ul class="list-group" *ngFor="let elemento of elementos">
-                    <li class="list-group-item d-flex justify-content-between align-items-center disabled">
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-center disabled" *ngFor="let elemento of elementos">
                         {{elemento.nombre}}, ({{elemento.peso}} Kg)
                         <span class="badge badge-secondary badge-pill">cantidad</span>
                     </li>
@@ -26,7 +26,10 @@
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           Cerrar
         </button>
-                <button type="button" class="btn btn-secondary" routerLink="maletabarco">
+                <button type="button" class="btn btn-secondary" (click)="cargarLista()">
+          Ver Contenido
+        </button>
+                <button type="button" class="btn btn-secondary">
           Editar Contenido
         </button>
             </div>
