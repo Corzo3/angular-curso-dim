@@ -21,11 +21,11 @@
           <div>
             <div class="row">
               <div>
-                <label class="nombre-campo">{{longitud > 55 ? "Medida no premitida" : "Medida permitida"}}</label>
+                <label class="nombre-campo">Altura(cm)</label>
                 <input
                   type="number"
                   class="form-control"
-                  placeholder= "largo"
+                  placeholder= "alto"
                   min="0"
                   max="55"
                 />
@@ -37,11 +37,11 @@
                   min="0"
                   max="35"
                 />
-                <label class="nombre-campo">Altura(cm)</label>
+                <label class="nombre-campo">Profundidad(cm)</label>
                 <input
                   type="number"
                   class="form-control"
-                  placeholder="alto"
+                  placeholder="profundo"
                   min="0"
                   max="25"
                 />
@@ -55,15 +55,16 @@
                 />
                 <div class="row">
                   <div class="col-6">
-                    <button type="reset" class="btn btn-primary resetear">
+                    <button type="reset" class="btn btn-primary resetear" (click)="borrarMensaje()">
                       Resetear
                     </button>
                   </div>
                   <div class="col-6">
-                    <button type="submit" class="btn btn-primary enviar">
+                    <button type="submit" class="btn btn-primary enviar" (click)="crearMaletaCabina()">
                       Enviar
                     </button>
                   </div>
+                  <p class="nombre-campo">{{mensaje}}</p>
                 </div>
                 <div class="container">
                   <div class="botonera">

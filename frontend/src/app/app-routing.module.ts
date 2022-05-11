@@ -2,9 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './core/not-found/not-found.component';
 import { MaletasComponent } from './maletas/maletas/maletas.component';
-import { MaletabarcoComponent } from './nuevamaleta/maletabarco/maletabarco.component';
-import { MaletacabinaComponent } from './nuevamaleta/maletacabina/maletacabina.component';
-import { ListadomaterialComponent } from './nuevamaleta/listadomaterial/listadomaterial.component';
+
 
 const routes: Routes = [
   {
@@ -16,8 +14,8 @@ const routes: Routes = [
     loadChildren: () => import('./nuevamaleta/nuevamaleta.module').then((m) => m.NuevamaletaModule),
   },
   {
-    path: 'maletas',
-    component: MaletasComponent,
+    path: '',
+    loadChildren: () => import('./maletas/maletas.module').then((m) => m.MaletasModule),
   },
   {
     path: 'not-found',

@@ -12,5 +12,12 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+   accion() {
+    var enlace = document.getElementsByClassName('enlace');
+    for (var i = 0; i < enlace.length; i++) {
+        enlace[i].classList.toggle('desaparece');
+    }
+}
+
 
 }

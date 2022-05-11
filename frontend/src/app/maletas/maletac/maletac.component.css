@@ -2,20 +2,7 @@
   margin-top: 5%;
   font-size: 1.5rem;
 }
-.mochila {
-  margin-top: 5%;
-  font-size: 1.5rem;
-}
-
-.mcabina{
-  width: 10rem;
-}
-
-.mbarco{
-  width: 8rem;
-}
-
-.container.cabina {
+img.col-5{
   margin-top: 15%;
 }
 
@@ -27,6 +14,12 @@ button.btn.btn-primary.btn-sm {
 button.btn.btn-secondary {
   background-color: rgb(5, 71, 46);
   border-color: rgb(58, 58, 57)
+}
+
+.list-group{
+  height: 30rem;
+  width: 100%;
+  overflow-y: auto;
 }
 
 .list-group-item {

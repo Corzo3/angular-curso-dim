@@ -11,11 +11,13 @@
 
 div.p-2.tipo-m {
   text-align: center;
-  margin-bottom: 3%;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 .container-fluid {
   z-index: 1;
+  margin-top: 0%;
 }
 
 .div.col {
@@ -72,7 +74,7 @@ img.maleta-nueva-c {
   width: 10rem;
 }
 div.botonera{
-  margin-top: 35%;
+  margin-top: 5%;
   margin-left: 15%;
   display: inline-flex;
 }

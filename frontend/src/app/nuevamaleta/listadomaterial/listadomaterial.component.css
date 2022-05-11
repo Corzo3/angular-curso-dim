@@ -5,7 +5,7 @@
   ;
   background-color: #a5abb1;
   margin-left: 15%;
-  margin-bottom: 5%;
+  margin-bottom: 0%;
   overflow-y: scroll;
 }
 
@@ -19,6 +19,9 @@
   position: relative;
   overflow: hidden;
   font-size: large;
+}
+.cargar{
+  margin-left: 50%;
 }
 
 .cantidad {
@@ -79,6 +82,25 @@
   background: rgb(3, 78, 34);
   height: 30px;
   width: 0;
+}
+
+.boton-primario {
+  border-radius: 5px;
+  background-color: rgb(5, 71, 46);
+  display: inline;
+  color: #fff;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: large;
+  width: 10rem;
+  height: 2.5rem;
+}
+
+.boton-primario:hover {
+  background-color: rgb(58, 58, 57);
+}
+
+.btn-secondary{
+  background-color: rgb(5, 71, 46);
 }
 
 @keyframes load {

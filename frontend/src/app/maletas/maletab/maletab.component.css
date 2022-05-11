@@ -28,6 +28,11 @@ button.btn.btn-secondary {
   background-color: rgb(5, 71, 46);
   border-color: rgb(58, 58, 57)
 }
+.list-group{
+  height: 30rem;
+  width: 100%;
+  overflow-y: auto;
+}
 
 .list-group-item {
   font-size: medium;
