@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { MaletaBarco } from '../models/maleta-barco';
 
 @Component({
   selector: 'app-maletabarco',
@@ -8,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MaletabarcoComponent implements OnInit {
 
-maletaBarco = {fechaRecogida: "" , peso:0}
+public maletasBarco: MaletaBarco[] = [];
+maletaBarco: MaletaBarco = {id:"", fechaRecogida : "", peso:0}
+
 creada = false;
 mensaje = "";
 
@@ -24,7 +26,7 @@ mostrarAyuda(){
   alert("La fecha que debe introducir es aproximadamente un mes antes de la fecha prevista para desplegar")
 }
 
-crearMaletaBarco(){
+public avisarCreada(){
 this.creada = true;
 this.mensaje = "Se ha creado una nueva maleta de barco "
 }

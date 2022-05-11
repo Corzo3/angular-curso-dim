@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './core/not-found/not-found.component';
-import { MaletasComponent } from './maletas/maletas/maletas.component';
 
 
 const routes: Routes = [

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MaletaCabina } from '../models/maleta-cabina';
 
 @Component({
   selector: 'app-maletacabina',
@@ -6,14 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./maletacabina.component.css'],
 })
 export class MaletacabinaComponent implements OnInit {
-  public maletaCabina = {altura: 0,anchura: 0, profundidad: 0, peso: 0 };
+  public maletasCabina : MaletaCabina[]=[]
+  maletaCabina:MaletaCabina= {id: "", altura: 0, anchura: 0, profundidad: 0, peso: 0};
   creada=false;
   mensaje = "";
   constructor() {}
 
   ngOnInit(): void {}
 
-  crearMaletaCabina(){
+  public saveMaletaCabina(){
+    this.maletasCabina.push({...this.maletaCabina})
+  }
+
+  public avisarCreada(){
     this.creada = true;
     this.mensaje = "Se ha creado una nueva maleta de cabina "
     }

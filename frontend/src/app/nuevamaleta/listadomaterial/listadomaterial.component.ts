@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import equipo from 'src/assets/equipo.json'
+import { ElementoEquipo } from '../models/elemento';
+import equipo from 'src/assets/equipo.json';
 
 @Component({
   selector: 'app-listadomaterial',
@@ -7,22 +8,13 @@ import equipo from 'src/assets/equipo.json'
   styleUrls: ['./listadomaterial.component.css'],
 })
 export class ListadomaterialComponent implements OnInit {
+  public elementos: ElementoEquipo[] = [];
 
-  elementos: Elemento[] = [];
-
-  constructor() {
-
-  }
+  constructor() {}
 
   ngOnInit(): void {}
 
-  cargarLista(){
+  public cargarLista() {
     this.elementos = equipo;
   }
-}
-
-
-export interface Elemento{
-  nombre: string;
-  peso: number;
 }
