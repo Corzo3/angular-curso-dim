@@ -1,27 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import equipo from 'src/assets/equipo.json'
+import equipo from 'src/assets/equipo.json';
+import { ElementoEquipo } from 'src/app/nuevamaleta/models/elemento';
 @Component({
   selector: 'app-maletab',
   templateUrl: './maletab.component.html',
-  styleUrls: ['./maletab.component.css']
+  styleUrls: ['./maletab.component.css'],
 })
 export class MaletabComponent implements OnInit {
+  elementos: ElementoEquipo[] = [];
+  constructor() {}
 
-  elementos: Elemento[] = [];
-  constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  mostrarContenido() {
+    alert('El contenido de la maleta es: elemento1, elemento2, elemento3');
   }
-  mostrarContenido(){
-    alert("El contenido de la maleta es: elemento1, elemento2, elemento3")
-  }
-  cargarLista(){
+  cargarLista() {
     this.elementos = equipo;
   }
 }
-
-export interface Elemento{
-  nombre: string;
-  peso: number;
-}
-

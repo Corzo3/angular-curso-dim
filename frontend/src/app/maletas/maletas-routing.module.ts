@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MaletasComponent } from './maletas/maletas.component';
 import { MaletabComponent } from './maletab/maletab.component';
 import { MaletacComponent } from './maletac/maletac.component';
+import { ListaComponent } from './lista/lista.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'maletac',
     component: MaletacComponent
+  },
+  {
+    path: 'lista',
+    component: ListaComponent
   },
 ];
 

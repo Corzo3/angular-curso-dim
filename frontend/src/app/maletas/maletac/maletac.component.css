@@ -1,60 +1,65 @@
 .petate {
-  margin-top: 5%;
-  font-size: 1.5rem;
+    margin-top: 5%;
+    font-size: 1.5rem;
 }
-img.col-5{
-  margin-top: 15%;
+
+.mochila {
+    width: 6em;
+}
+
+img.col-5 {
+    margin-top: 5%;
 }
 
 button.btn.btn-primary.btn-sm {
-  background-color: rgb(5, 71, 46);
-  border-color: rgb(58, 58, 57)
+    background-color: rgb(5, 71, 46);
+    border-color: rgb(58, 58, 57)
 }
 
 button.btn.btn-secondary {
-  background-color: rgb(5, 71, 46);
-  border-color: rgb(58, 58, 57)
+    background-color: rgb(5, 71, 46);
+    border-color: rgb(58, 58, 57)
 }
 
-.list-group{
-  height: 30rem;
-  width: 100%;
-  overflow-y: auto;
+.list-group {
+    height: 30rem;
+    width: 100%;
+    overflow-y: auto;
 }
 
 .list-group-item {
-  font-size: medium;
+    font-size: medium;
 }
 
 @media (max-width:600px) {
-  nav {
-      flex-direction: column;
-  }
-  .nav-boton {
-      display: inline-block;
-  }
-  .desaparece {
-      display: none;
-  }
+    nav {
+        flex-direction: column;
+    }
+    .nav-boton {
+        display: inline-block;
+    }
+    .desaparece {
+        display: none;
+    }
 }
 
 @media (min-width:768px) {
-  .lista-enlace {
-      flex: 1;
-      position: relative;
-      overflow: visible;
-  }
-  .lista-enlace .dropdown-content {
-      position: absolute;
-      width: 100%;
-  }
-  .dropdown-content {
-      display: none;
-  }
-  .lista-enlace:target .dropdown-content {
-      display: block;
-  }
-  .navegacion {
-      flex-direction: row;
-  }
+    .lista-enlace {
+        flex: 1;
+        position: relative;
+        overflow: visible;
+    }
+    .lista-enlace .dropdown-content {
+        position: absolute;
+        width: 100%;
+    }
+    .dropdown-content {
+        display: none;
+    }
+    .lista-enlace:target .dropdown-content {
+        display: block;
+    }
+    .navegacion {
+        flex-direction: row;
+    }
 }
