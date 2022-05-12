@@ -1,4 +1,33 @@
-<button class="boton-primario cargar" (click)="cargarLista()">Cargar lista</button>
+  <p>
+        <button class="btn btn-primary boton-formulario" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Nuevo Elemento
+    </button>
+  </p>
+  <div class="collapse" id="collapseExample">
+        <form class="row g-3 needs-validation" novalidate>
+          <div class="col-md-4 position-relative ">
+            <label for="validationTooltip01" class="form-label campo-nombre">Nombre</label>
+            <input type="text" class="form-control campo-nombre" id="validationTooltip01" value="" required>
+            <div class="valid-tooltip">
+              nombre valido
+            </div>
+          </div>
+          <div class="col-md-4 position-relative">
+            <label for="validationTooltip02" class="form-label campo-peso">Peso</label>
+            <input type="number" class="form-control campo-peso" id="validationTooltip02" value="" required min="0">
+            <div class="valid-tooltip">
+              peso valido
+            </div>
+          </div>
+          <div class="col-6">
+            <button class="btn btn-primary boton-primario enviar" type="submit">Enviar</button>
+          </div>
+          <div class="col-6">
+            <button class="btn btn-primary boton-primario enviar" type="reset">Cancelar</button>
+          </div>
+        </form>
+  </div>
+
 <br />
 <br />
 <div class="list-items">
@@ -8,40 +37,5 @@
         <span><input type="number" min="0" class="cantidad" placeholder="cant." /></span>
     </div>
 </div>
-<button type="button" class="boton-primario cargar" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Nuevo Elemento
-</button>
-<div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Nuevo Elemento</h5>
-                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-            </div>
-            <div class="modal-body">
-                <form action="" class="col-12">
-                    <label for="">Nombre</label>
-                    <br />
-                    <input type="text" />
-                    <br />
-                    <label for="">Peso</label>
-                    <br />
-                    <input type="number" step="any" min="0" />
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-          Cerrar
-        </button>
-                <button type="reset" class="btn btn-secondary" routerLink="maletabarco">
-          Limpiar
-        </button>
-                <button type="submit" class="btn btn-secondary" routerLink="maletabarco">
-          Enviar
-        </button>
-            </div>
-        </div>
-    </div>
-</div>
+<span><button class="boton-primario cargar" (click)="cargarLista()">Cargar lista</button></span>
+

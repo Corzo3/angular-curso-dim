@@ -10,7 +10,6 @@ footer.container-fluid.pie-pagina{
 }
 
 .pie-pagina{
-  position: fixed;
   bottom: 100%;
   left: 100%;
 }

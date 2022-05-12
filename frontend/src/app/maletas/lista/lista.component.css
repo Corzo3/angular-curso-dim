@@ -1,6 +1,6 @@
 .list-items {
     align-content: center;
-    margin-top: 1%;
+    margin-top: 10%;
     display: inline-block;
     width: 22em;
     height: 13em;
@@ -30,4 +30,5 @@
     margin-right: 3%;
     border-radius: 4px;
     margin-top: 5%;
+    margin-top: 10%;
 }

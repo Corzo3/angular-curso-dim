@@ -9,12 +9,19 @@ import equipo from 'src/assets/equipo.json';
 })
 export class ListadomaterialComponent implements OnInit {
   public elementos: ElementoEquipo[] = [];
-
+  public formHidden = false;
   constructor() {}
 
   ngOnInit(): void {}
 
   public cargarLista() {
     this.elementos = equipo;
+  }
+
+  public mostrarFormulario(){
+    this.formHidden = false;
+  }
+  public ocultarFormulario(){
+    this.formHidden = true;
   }
 }
