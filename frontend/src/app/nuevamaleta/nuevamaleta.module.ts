@@ -11,12 +11,16 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
+import { BarcoFormComponent } from './barco-form/barco-form.component';
+import { CabinaFormComponent } from './cabina-form/cabina-form.component';
 
 @NgModule({
   declarations: [
     MaletabarcoComponent,
     MaletacabinaComponent,
     ListadomaterialComponent,
+    BarcoFormComponent,
+    CabinaFormComponent,
 
   ],
   imports: [

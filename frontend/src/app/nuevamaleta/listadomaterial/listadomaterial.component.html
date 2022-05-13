@@ -1,32 +1,32 @@
-  <p>
-        <button class="btn btn-primary boton-formulario" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+<p>
+    <button class="btn btn-primary boton-formulario" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
     Nuevo Elemento
     </button>
-  </p>
-  <div class="collapse" id="collapseExample">
-        <form class="row g-3 needs-validation" novalidate>
-          <div class="col-md-4 position-relative ">
+</p>
+<div class="collapse" id="collapseExample">
+    <form class="row g-3 needs-validation" novalidate>
+        <div class="col-md-4 position-relative ">
             <label for="validationTooltip01" class="form-label campo-nombre">Nombre</label>
             <input type="text" class="form-control campo-nombre" id="validationTooltip01" value="" required>
             <div class="valid-tooltip">
-              nombre valido
+                nombre valido
             </div>
-          </div>
-          <div class="col-md-4 position-relative">
+        </div>
+        <div class="col-md-4 position-relative">
             <label for="validationTooltip02" class="form-label campo-peso">Peso</label>
             <input type="number" class="form-control campo-peso" id="validationTooltip02" value="" required min="0">
             <div class="valid-tooltip">
-              peso valido
+                peso valido
             </div>
-          </div>
-          <div class="col-6">
+        </div>
+        <div class="col-6">
             <button class="btn btn-primary boton-primario enviar" type="submit">Enviar</button>
-          </div>
-          <div class="col-6">
+        </div>
+        <div class="col-6">
             <button class="btn btn-primary boton-primario enviar" type="reset">Cancelar</button>
-          </div>
-        </form>
-  </div>
+        </div>
+    </form>
+</div>
 
 <br />
 <br />
@@ -34,8 +34,8 @@
     <div class="item" *ngFor="let elemento of elementos">
         <input type="checkbox" />
         <label>{{ elemento.nombre }} ({{ elemento.peso }} kg)</label>
-        <span><input type="number" min="0" class="cantidad" placeholder="cant." /></span>
+
+        <span> <button type="button" class="class= btn btn-light btn-sm" (click)="restarCantidad(elemento)">-</button>  <button type="button" class="class= btn btn-light btn-sm" (click)="sumarCantidad(elemento)">+</button><input type="text" min="0" class="cantidad" placeholder="cant." [(ngModel)]="elemento.cantidad" (focus)="verificarCantidad(elemento)"/> </span>
     </div>
 </div>
 <span><button class="boton-primario cargar" (click)="cargarLista()">Cargar lista</button></span>
-

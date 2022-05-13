@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { MaletaBarco } from '../models/maleta-barco';
+import { ElementoEquipo } from '../models/elemento';
+import { MaletaBarcoService } from '../service/maleta-barco-service';
+
+
 
 @Component({
   selector: 'app-maletabarco',
@@ -8,32 +11,12 @@ import { MaletaBarco } from '../models/maleta-barco';
 })
 export class MaletabarcoComponent implements OnInit {
 
-public maletasBarco: MaletaBarco[] = [];
-maletaBarco: MaletaBarco = {id:"", fechaRecogida : "", peso:0}
+  elementos : ElementoEquipo[] = []
 
-creada = false;
-mensaje = "";
-
-  constructor() { }
+  constructor(private maletaBarcoService: MaletaBarcoService) { }
 
   ngOnInit(): void {
+    this.maletaBarcoService.elementosMaleta.subscribe
+    (data => this.elementos = data)
   }
-
-  mostrarFecha(value:string){
-
-  }
-mostrarAyuda(){
-  alert("La fecha que debe introducir es aproximadamente un mes antes de la fecha prevista para desplegar")
-}
-
-public avisarCreada(){
-this.creada = true;
-this.mensaje = "Se ha creado una nueva maleta de barco "
-}
-
-borrarMensaje(){
-  this.mensaje="";
-}
-
-
 }
