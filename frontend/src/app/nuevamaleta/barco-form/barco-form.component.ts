@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { MaletaBarco } from '../models/maleta-barco';
 @Component({
   selector: 'app-barco-form',
@@ -6,7 +7,9 @@ import { MaletaBarco } from '../models/maleta-barco';
   styleUrls: ['./barco-form.component.css'],
 })
 export class BarcoFormComponent implements OnInit {
-  constructor() {}
+
+
+  constructor( ) {}
   public maletasBarco: MaletaBarco[] = [];
   maletaBarco: MaletaBarco = { id: '', fechaRecogida: '', peso: 0 };
   creada = false;
@@ -27,4 +30,6 @@ export class BarcoFormComponent implements OnInit {
   borrarMensaje() {
     this.mensaje = '';
   }
+
+
 }

@@ -1,7 +1,7 @@
 .list-items {
   display: inline-block;
-  width: 25em;
-  height: 30em;
+  width: 29em;
+  height: 32em;
   background-color: #a5abb1;
   margin-left: 15%;
   margin-bottom: 0%;
@@ -10,8 +10,8 @@
 
 .item {
   width: 100%;
-  height: 50px;
-  border: 1px solid rgba(0, 0, 0, .4);
+  height: 3em;
+  border: 1px solid rgba(0, 0, 0, 0.4);
   display: grid;
   grid-template-columns: 2fr 30fr 1fr;
   align-items: center;
@@ -19,16 +19,23 @@
   overflow: hidden;
   font-size: large;
 }
-.cargar{
+
+.cargar {
   margin-left: 50%;
+}
+
+.seleccionado{
+  width: 100%;
+  height: 3em;
+  font-size: large;
 }
 
 .cantidad {
   font-size: medium;
   margin-bottom: 10%;
   margin-right: 15%;
-  width: 70px;
-  height: 20px;
+  width: 3.5em;
+  height: 1.5em;
 }
 
 .item input[type="checkbox"] {
@@ -41,7 +48,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: .2s all;
+  transition: 0.2s all;
   cursor: pointer;
   z-index: 2;
 }
@@ -52,7 +59,7 @@
   box-shadow: 0px 0px 5px rgb(0, 0, 0);
 }
 
-.item input[type="checkbox"]:checked~label {
+.item input[type="checkbox"]:checked ~ label {
   color: rgb(0, 0, 0);
   text-decoration: line-through;
   text-decoration-thickness: 3px;
@@ -88,16 +95,16 @@
   background-color: rgb(5, 71, 46);
   display: inline;
   color: #fff;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: large;
   width: 10rem;
   height: 2.5rem;
 }
 
-.campo-nombre{
+.campo-nombre {
   margin-left: 100%;
 }
-.campo-peso{
+.campo-peso {
   margin-left: 100%;
 }
 
@@ -105,59 +112,66 @@
   background-color: rgb(58, 58, 57);
 }
 
-.boton-formulario{
+.boton-formulario {
   background-color: rgb(5, 71, 46);
   color: white;
   margin-bottom: 3%;
   margin-left: 50%;
 }
 
-.enviar{
+.enviar {
   margin-left: 30%;
 }
 
-.btn-secondary{
+.btn-secondary {
   background-color: rgb(5, 71, 46);
+}
+.restar {
+  height: 2em;
+}
+.sumar {
+  margin-left: 10%;
+  height: 2em;
 }
 
 @keyframes load {
   0% {
-      width: 0;
+    width: 0;
   }
   100% {
-      width: 68%;
+    width: 68%;
   }
 }
 
-@media (max-width:600px) {
+@media (max-width: 600px) {
   nav {
-      flex-direction: column;
+    flex-direction: column;
   }
   .nav-boton {
-      display: inline-block;
+    display: inline-block;
   }
   .desaparece {
-      display: none;
+    display: none;
   }
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
   .lista-enlace {
-      flex: 1;
-      position: relative;
-      overflow: visible;
+    flex: 1;
+    position: relative;
+    overflow: visible;
   }
   .lista-enlace .dropdown-content {
-      position: absolute;
-      width: 100%;
+    position: absolute;
+    width: 100%;
   }
   .dropdown-content {
-      display: none;
+    display: none;
   }
   .lista-enlace:target .dropdown-content {
-      display: block;
+    display: block;
   }
   .navegacion {
-      flex-direction: row;
+    flex-direction: row;
   }
 }

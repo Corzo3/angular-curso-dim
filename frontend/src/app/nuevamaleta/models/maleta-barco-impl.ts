@@ -1,9 +1,9 @@
 import { MaletaBarco } from './maleta-barco';
+import { MaletaImpl } from './maletaImpl';
 
-export class MaletaBarcoImpl implements MaletaBarco {
-  id: string = '';
+export class MaletaBarcoImpl extends MaletaImpl implements MaletaBarco {
   fechaRecogida: string = '';
-  peso: number = 0;
-
-  constructor(){}
+  constructor() {
+    super();
+  }
 }

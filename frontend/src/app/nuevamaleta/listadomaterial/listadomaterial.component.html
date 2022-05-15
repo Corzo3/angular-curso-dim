@@ -1,10 +1,10 @@
-<p>
+
     <button class="btn btn-primary boton-formulario" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
     Nuevo Elemento
     </button>
-</p>
+
 <div class="collapse" id="collapseExample">
-    <form class="row g-3 needs-validation" novalidate>
+    <form class="row g-3 needs-validation" novalidate >
         <div class="col-md-4 position-relative ">
             <label for="validationTooltip01" class="form-label campo-nombre">Nombre</label>
             <input type="text" class="form-control campo-nombre" id="validationTooltip01" value="" required>
@@ -32,10 +32,16 @@
 <br />
 <div class="list-items">
     <div class="item" *ngFor="let elemento of elementos">
-        <input type="checkbox" />
-        <label>{{ elemento.nombre }} ({{ elemento.peso }} kg)</label>
-
-        <span> <button type="button" class="class= btn btn-light btn-sm" (click)="restarCantidad(elemento)">-</button>  <button type="button" class="class= btn btn-light btn-sm" (click)="sumarCantidad(elemento)">+</button><input type="text" min="0" class="cantidad" placeholder="cant." [(ngModel)]="elemento.cantidad" (focus)="verificarCantidad(elemento)"/> </span>
+        <input type="checkbox" name="{{elemento.nombre}}" [value]="elemento.nombre" (change)="getNombreElemento($event, elemento)">
+        <label for="">{{ elemento.nombre }} ({{ elemento.peso }} kg)</label>
+        <span> <button type="button" class="class= btn btn-light btn-sm restar" (click)="restarCantidad(elemento)">-</button>  <button type="button" class="class= btn btn-light btn-sm sumar" (click)="sumarCantidad(elemento)">+</button><input type="number" min="0" class="cantidad" placeholder="cant." [(ngModel)]="elemento.cantidad" (focus)="verificarCantidad(elemento)"/> </span>
     </div>
 </div>
 <span><button class="boton-primario cargar" (click)="cargarLista()">Cargar lista</button></span>
+
+<div class="list-items">
+  <div class="seleccionado" *ngFor="let elemento of elementosSeleccionados">
+    <label for="">{{elemento.nombre}} {{elemento.cantidad}}</label>
+  </div>
+</div>
+

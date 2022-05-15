@@ -11,7 +11,8 @@ import { MainComponent } from './core/shell/main/main.component';
 import { FooterComponent } from './core/shell/footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { MaletabComponent } from './nuevamaleta/maletab/maletab.component';
+import { MaletacComponent } from './nuevamaleta/maletac/maletac.component';
 
 
 @NgModule({
@@ -22,6 +23,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HeaderComponent,
     MainComponent,
     FooterComponent,
+    MaletabComponent,
+    MaletacComponent
   ],
   imports: [BrowserModule, AppRoutingModule, CommonModule, FormsModule, BrowserAnimationsModule, ReactiveFormsModule],
   providers: [],
