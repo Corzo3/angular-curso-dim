@@ -10,8 +10,16 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
   },
   {
-    path: '',
-    loadChildren: () => import('./nuevamaleta/nuevamaleta.module').then((m) => m.NuevamaletaModule),
+    path: 'nuevamaletabarco',
+    loadChildren: () => import('./nuevamaletabarco/nuevamaletabarco.module').then((m) => m.NuevamaletabarcoModule),
+  },
+  {
+    path: 'nuevamaletacabina',
+    loadChildren: () => import('./nuevamaletacabina/nuevamaletacabina.module').then((m) => m.NuevamaletacabinaModule),
+  },
+  {
+    path: 'elementosequipo',
+    loadChildren: () => import('./elementosequipo/elementosequipo.module').then((m) => m.ElementosequipoModule),
   },
 
   {

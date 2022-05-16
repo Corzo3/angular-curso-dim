@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HeaderComponent,
     MainComponent,
     FooterComponent,
+
   ],
   imports: [BrowserModule, AppRoutingModule, CommonModule, FormsModule, BrowserAnimationsModule, ReactiveFormsModule],
   providers: [],

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, throwError } from 'rxjs';
-import { ElementoEquipo } from '../models/elemento';
+import { ElementoEquipo } from 'src/app/elementosequipo/models/elementoequipo';
 import { HttpClient } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
 import { environment } from 'src/environments/environment.prod';
@@ -33,15 +33,6 @@ export class MaletaBarcoService {
  /*  getMaletasBarco(): Observable<any> {
     return this.http.get<any>(this.urlEndPoint);
   } */
-
-  addToMaleta(elemento: ElementoEquipo) {
-    let indice = this.elementos.findIndex((e) => e.nombre === elemento.nombre);
-    if (indice === -1) this.elementos.push(elemento);
-    else this.elementos[indice].cantidad = elemento.cantidad;
-    if (elemento.cantidad == 0) {
-      this.elementos.splice(indice, 1);
-    }
-  }
 
   mapearMaletaBarco(maletaBarcoApi: any): MaletaBarco {
     let maletaBarco: MaletaBarco = new MaletaBarcoImpl();

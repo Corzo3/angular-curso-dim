@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import equipo from 'src/assets/equipo.json';
-import { ElementoEquipo } from 'src/app/nuevamaleta/models/elemento';
+import { ElementoEquipo } from 'src/app/elementosequipo/models/elementoequipo';
 @Component({
   selector: 'app-maletab',
   templateUrl: './maletab.component.html',

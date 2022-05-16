@@ -1,0 +1,7 @@
+<h1> Listado de Elementos</h1>
+  <div class="list-items">
+    <div class="seleccionado" *ngFor="let elemento of elementos">
+      <app-elementoitem [elemento] = "elemento"></app-elementoitem>
+    </div>
+  </div>
+

@@ -7,20 +7,22 @@ import { ListaComponent } from './lista/lista.component';
 
 const routes: Routes = [
   {
-    path: 'maletas',
-    component: MaletasComponent
-  },
-  {
-    path: 'maletab',
-    component: MaletabComponent
-  },
-  {
-    path: 'maletac',
-    component: MaletacComponent
-  },
-  {
-    path: 'lista',
-    component: ListaComponent
+    path: '',
+    component: MaletasComponent,
+    children: [
+      {
+        path: 'maletab',
+        component: MaletabComponent,
+      },
+      {
+        path: 'maletac',
+        component: MaletacComponent,
+      },
+      {
+        path: 'lista',
+        component: ListaComponent,
+      },
+    ],
   },
 ];
 
