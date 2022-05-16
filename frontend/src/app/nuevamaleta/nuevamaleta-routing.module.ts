@@ -5,17 +5,14 @@ import { MaletacabinaComponent } from './maletacabina/maletacabina.component';
 import { ListadomaterialComponent } from './listadomaterial/listadomaterial.component';
 import { BarcoFormComponent } from './barco-form/barco-form.component';
 import { CabinaFormComponent } from './cabina-form/cabina-form.component';
-import { MaletabComponent } from './maletab/maletab.component';
-import { MaletacComponent } from './maletac/maletac.component';
+
 
 const routes: Routes = [
   { path: 'maletabarco', component: MaletabarcoComponent },
   { path: 'maletacabina', component: MaletacabinaComponent },
   { path: 'listadomaterial', component: ListadomaterialComponent },
   { path: 'barco-form', component: BarcoFormComponent },
-  { path: 'cabina-form', component: CabinaFormComponent },
-  {path: 'maletab',component: MaletabComponent},
-  {path: 'maletac', component: MaletacComponent},
+  { path: 'cabina-form', component: CabinaFormComponent }
 ];
 
 @NgModule({

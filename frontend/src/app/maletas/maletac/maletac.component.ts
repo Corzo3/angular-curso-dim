@@ -20,4 +20,3 @@ export class MaletacComponent implements OnInit {
   }
 
 }
-
