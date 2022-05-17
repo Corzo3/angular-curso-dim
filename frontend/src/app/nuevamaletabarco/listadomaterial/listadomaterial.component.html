@@ -1,11 +1,12 @@
-  <div class="list-items">
+<span><button class="boton-primario cargar" (click)="cargarLista()">Cargar</button></span>
+ <div class="list-items">
       <div class="item" *ngFor="let elemento of elementos">
           <input type="checkbox" name="{{elemento.nombre}}" [value]="elemento.nombre" (change)="getNombreElemento($event, elemento)">
           <label for="">{{ elemento.nombre }} ({{ elemento.peso }} kg)</label>
           <span> <input type="number" min="0" class="cantidad" placeholder="cant."/> </span>
       </div>
   </div>
-  <span><button class="boton-primario cargar" (click)="cargarLista()">Cargar lista</button></span>
+
 
 
   <div class="list-items" *ngIf="listaCargada == true">

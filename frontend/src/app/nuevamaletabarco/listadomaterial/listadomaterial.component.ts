@@ -12,7 +12,7 @@ import { ElementoequipoImpl } from 'src/app/elementosequipo/models/elementoequip
   styleUrls: ['./listadomaterial.component.css'],
 })
 export class ListadomaterialComponent implements OnInit {
-  public elementos: ElementoEquipo[] = [];
+  public elementos: ElementoEquipo[] = equipo;
   elementosSeleccionados: ElementoEquipo[] = [];
   elementosNuevos: ElementoEquipo[] = [];
   listaCargada: boolean = false;
@@ -25,7 +25,6 @@ export class ListadomaterialComponent implements OnInit {
   }
 
   public cargarLista() {
-    this.elementos = equipo;
     this.listaCargada = true;
   }
 

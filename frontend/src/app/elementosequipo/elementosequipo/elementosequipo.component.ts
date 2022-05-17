@@ -3,6 +3,7 @@ import { AuxiliarService } from 'src/app/service/auxiliar.service';
 import { ElementoEquipo } from '../models/elementoequipo';
 import { ElementoequipoImpl } from '../models/elementoequipo-impl';
 import { ElementoService } from '../service/elemento.service';
+import equipo from 'src/assets/equipo.json';
 
 @Component({
   selector: 'app-elementosequipo',
@@ -14,6 +15,7 @@ export class ElementosequipoComponent implements OnInit {
   todosElementos: ElementoEquipo[] = [];
   elementoVerDatos: ElementoEquipo = new ElementoequipoImpl("",0);
   numPaginas: number = 0;
+  listaCargada: boolean = false;
 
   constructor(){}
 /*   constructor(
@@ -42,4 +44,9 @@ export class ElementosequipoComponent implements OnInit {
       }
     });
   } */
+
+  public cargarLista() {
+    this.elementos = equipo;
+    this.listaCargada = true;
+  }
 }
